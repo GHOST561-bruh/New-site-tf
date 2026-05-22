@@ -1,21 +1,16 @@
-import './App.css'
+import { Routes, Route } from 'react-router'
+import Home from './pages/Home'
+import Admin from './pages/Admin'
+import Verify from './pages/Verify'
+import Success from './pages/Success'
 
-function App() {
+export default function App() {
   return (
-    <div className="app-container">
-      <header>
-        <h1>Welcome to Your Site! 🚀</h1>
-        <p>Built with Vite + React, deployed on Vercel</p>
-      </header>
-      <main>
-        <section className="hero">
-          <h2>Hello World!</h2>
-          <p>Your site is live and ready to go.</p>
-          <button onClick={() => alert('Button works! 🎉')}>Click Me</button>
-        </section>
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/verify" element={<Verify />} />
+      <Route path="/success" element={<Success />} />
+    </Routes>
   )
 }
-
-export default App
